@@ -1,7 +1,7 @@
 {
-  "name": "react-get-started",
+  "name": "lotr",
   "version": "1.0.0",
-  "description": "react getting started boilerplate",
+  "description": "lotr",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

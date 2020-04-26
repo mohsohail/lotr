@@ -1,3 +1,3 @@
-# react-get-started
+# lotr repo
 
-react starter kit
+One repo to rule them all

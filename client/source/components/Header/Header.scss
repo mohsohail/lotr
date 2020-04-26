@@ -1,4 +1,7 @@
 .nav-styles ul {
   display: flex;
   list-style: none;
+  a {
+    text-decoration: none;
+  }
 }

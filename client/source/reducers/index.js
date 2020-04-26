@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import foo from '../reducers/foo.reducer';
-import skill from '../reducers/skill.reducer';
+import books from '../reducers/books.reducer';
 
 export default combineReducers({
-  foo,
-  skill,
+  books,
 });

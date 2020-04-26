@@ -8,7 +8,7 @@ import CharactersView from './views/CharactersView';
 
 class CharactersPage extends Component {
   componentDidMount() {
-    this.props.fetchBooks();
+    this.props.fetchCharacters();
   }
   render() {
     return (

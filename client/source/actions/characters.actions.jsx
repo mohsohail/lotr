@@ -27,7 +27,7 @@ export const fetchCharacters = () => async (dispatch) => {
   }
 };
 
-export const fetchCharacters = (payload) => async (dispatch) => {
+export const fetchCharacter = (payload) => async (dispatch) => {
   dispatch({
     type: FETCH_CHARACTER_INIT,
   });

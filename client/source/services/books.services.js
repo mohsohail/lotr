@@ -1,4 +1,4 @@
-import { baseUrl } from '../constants/env';
+import { baseUrl, token } from '../constants/env';
 
 import { FETCH_BOOKS, FETCH_BOOK } from '../constants/endpoints';
 import { callAPI } from '../utils/api.utils';
@@ -7,7 +7,9 @@ export const processFetchBooks = async () => {
   const request = {
     url: `${baseUrl}${FETCH_BOOKS}`,
     method: 'get',
-    headers: {},
+    headers: {
+      token,
+    },
   };
   const response = await callAPI(request);
   if (!response.err) {

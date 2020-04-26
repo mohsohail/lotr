@@ -7,6 +7,9 @@ import { fetchBooks } from '../../actions/books.actions';
 import BookView from './views/BooksView';
 
 class BookPage extends Component {
+  componentDidMount() {
+    this.props.fetchBooks();
+  }
   render() {
     return (
       <div>

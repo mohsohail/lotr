@@ -7,7 +7,7 @@ import {
   FETCH_CHARACTER_FAILURE,
 } from '../constants/actions';
 
-import { processFetchCharacters, processFetchCharacter } from '../services/books.services';
+import { processFetchCharacters, processFetchCharacter } from '../services/characters.services';
 
 export const fetchCharacters = () => async (dispatch) => {
   dispatch({

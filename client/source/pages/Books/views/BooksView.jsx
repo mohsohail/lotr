@@ -21,8 +21,8 @@ const BookView = (props) => {
           {booksData.status === 2 && <BookDetailsContainer bookData={bookData} />}
         </MiddleSection>
         <RightSection>
-          {mainCharacters && mainCharacters.lenght !== 0 && (
-            <CharactersListContainer mainCharactersData={mainCharacters} />
+          {mainCharacters && mainCharacters.length !== 0 && (
+            <CharactersListContainer mainCharactersData={mainCharacters} history={props.history} />
           )}
         </RightSection>
       </Page>

@@ -22,7 +22,6 @@ class CharactersPage extends Component {
 CharactersPage.propTypes = {};
 
 const mapStateToProps = (state) => {
-  console.log('CharactersPage', state);
   return {};
 };
 

@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const List = ({ data, renderItem, HeaderComponent, FooterComponent }) => {
+const List = ({ data, renderItem, HeaderComponent, FooterComponent, itemSeparator }) => {
   return (
     <>
       <div>{HeaderComponent && HeaderComponent()}</div>
-      <hr />
+      <br />
       <div>
         {data &&
-          data.map((item) => {
-            return renderItem(item);
+          data.map((item, i) => {
+            return (
+              <Fragment key={i}>
+                {renderItem(item)}
+                {itemSeparator && itemSeparator()}
+              </Fragment>
+            );
           })}
       </div>
-      <hr />
+      <br />
       <div>{FooterComponent && FooterComponent()}</div>
     </>
   );

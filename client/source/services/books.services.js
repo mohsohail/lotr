@@ -8,7 +8,7 @@ export const processFetchBooks = async () => {
     url: `${baseUrl}${FETCH_BOOKS}`,
     method: 'get',
     headers: {
-      token,
+      Authorization: `Bearer ${token}`,
     },
   };
   const response = await callAPI(request);

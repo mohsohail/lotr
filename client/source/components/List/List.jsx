@@ -5,12 +5,14 @@ const List = ({ data, renderItem, HeaderComponent, FooterComponent }) => {
   return (
     <>
       <div>{HeaderComponent && HeaderComponent()}</div>
+      <hr />
       <div>
         {data &&
           data.map((item) => {
             return renderItem(item);
           })}
       </div>
+      <hr />
       <div>{FooterComponent && FooterComponent()}</div>
     </>
   );

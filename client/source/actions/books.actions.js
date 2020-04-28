@@ -17,7 +17,7 @@ export const fetchBooks = () => async (dispatch) => {
   if (!response.err) {
     dispatch({
       type: FETCH_BOOKS_SUCCESS,
-      payload: response.data,
+      payload: response,
     });
   } else {
     dispatch({
@@ -27,11 +27,11 @@ export const fetchBooks = () => async (dispatch) => {
   }
 };
 
-export const fetchBook = (payload) => async (dispatch) => {
+export const fetchBook = (bookId) => async (dispatch) => {
   dispatch({
     type: FETCH_BOOK_INIT,
   });
-  const response = await processFetchBook(payload);
+  const response = await processFetchBook(bookId);
   if (!response.err) {
     dispatch({
       type: FETCH_BOOK_SUCCESS,

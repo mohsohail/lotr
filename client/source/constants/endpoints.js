@@ -1,7 +1,7 @@
 // books
 export const FETCH_BOOKS = '/book';
-export const FETCH_BOOK = ({ id }) => {
-  return `/book/${id}`;
+export const FETCH_BOOK = (bookId) => {
+  return `/book/${bookId}`;
 };
 
 // characters

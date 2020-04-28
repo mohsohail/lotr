@@ -12,23 +12,15 @@ export const processFetchBooks = async () => {
     },
   };
   const response = await callAPI(request);
-  if (!response.err) {
-    return response;
-  } else {
-    return { err: true };
-  }
+  return response;
 };
 
-export const processFetchBook = async (payload) => {
+export const processFetchBook = async (bookId) => {
   const request = {
-    url: `${baseUrl}` + FETCH_BOOK(payload),
+    url: `${baseUrl}` + FETCH_BOOK(bookId),
     method: 'get',
     headers: {},
   };
   const response = await callAPI(request);
-  if (!response.err) {
-    return response;
-  } else {
-    return { err: true };
-  }
+  return response;
 };

@@ -11,6 +11,7 @@ class BookPage extends Component {
   state = {
     mainCharacters: [],
   };
+
   componentDidMount() {
     this.props.fetchBooks();
     this.props.fetchCharacters();
@@ -48,7 +49,6 @@ const mapStateToProps = (state) => {
     booksData: state.books.booksData,
     bookData: state.books.bookData,
     charactersData: state.characters.charactersData,
-    characterData: state.characters.characterData,
   };
 };
 

@@ -11,12 +11,16 @@ const Item = ({ data }) => {
   );
 };
 
-const HeaderComponent = () => {
+const headerComponent = () => {
   return (
     <div>
       <input type="text" placeholder="search" />
     </div>
   );
+};
+
+const footerComponent = () => {
+  return <div>see more</div>;
 };
 
 const CharactersListContainer = ({ mainCharactersData, history }) => {
@@ -28,11 +32,9 @@ const CharactersListContainer = ({ mainCharactersData, history }) => {
       <List
         data={mainCharactersData}
         renderItem={(data) => <Item key={data._id} data={data} />}
-        HeaderComponent={<HeaderComponent />}
+        HeaderComponent={headerComponent}
+        FooterComponent={footerComponent}
       />
-      <div>
-        <p onClick={handleClick}>See More</p>
-      </div>
     </>
   );
 };

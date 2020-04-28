@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const List = ({ data, renderItem, HeaderComponent }) => {
+const List = ({ data, renderItem, HeaderComponent, FooterComponent }) => {
   return (
     <>
-      <div>{HeaderComponent}</div>
+      <div>{HeaderComponent && HeaderComponent()}</div>
       <div>
         {data &&
           data.map((item) => {
             return renderItem(item);
           })}
       </div>
+      <div>{FooterComponent && FooterComponent()}</div>
     </>
   );
 };
@@ -20,4 +21,5 @@ List.propTypes = {
   renderItem: PropTypes.func.isRequired,
 };
 
-export default React.memo(List);
+// export default React.memo(List);
+export default List;

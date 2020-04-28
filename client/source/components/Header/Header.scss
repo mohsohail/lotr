@@ -1,6 +1,11 @@
 .nav-styles ul {
+  font-size: 18px;
   display: flex;
   list-style: none;
+  li {
+    margin-left: 20px;
+    padding: 10px 10px;
+  }
   a {
     text-decoration: none;
   }

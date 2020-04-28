@@ -35,7 +35,7 @@ export const fetchBook = (bookId) => async (dispatch) => {
   if (!response.err) {
     dispatch({
       type: FETCH_BOOK_SUCCESS,
-      payload: response.data,
+      payload: response,
     });
   } else {
     dispatch({

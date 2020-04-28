@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import List from '../../../components/List/List';
+import Search from '../../../components/Search/Search';
 
 const Item = ({ data }) => {
   return (
@@ -12,11 +13,7 @@ const Item = ({ data }) => {
 };
 
 const headerComponent = () => {
-  return (
-    <div>
-      <input type="text" placeholder="search" />
-    </div>
-  );
+  return <Search placeholder={'search character'} />;
 };
 
 const footerComponent = () => {

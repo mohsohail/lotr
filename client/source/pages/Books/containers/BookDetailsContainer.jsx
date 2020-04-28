@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BookDetailsContainer = (props) => {
-  return <div></div>;
+const BookDetailsContainer = ({ bookData }) => {
+  return <div>{bookData.data.name}</div>;
 };
 
 BookDetailsContainer.propTypes = {};

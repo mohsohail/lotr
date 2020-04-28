@@ -31,13 +31,11 @@ class BookPage extends Component {
   render() {
     const { mainCharacters } = this.state;
     return (
-      <div>
-        <BookView
-          {...this.props}
-          mainCharacters={mainCharacters}
-          handleFetchBook={this.handleFetchBook}
-        />
-      </div>
+      <BookView
+        {...this.props}
+        mainCharacters={mainCharacters}
+        handleFetchBook={this.handleFetchBook}
+      />
     );
   }
 }

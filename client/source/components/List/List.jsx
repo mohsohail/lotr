@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const List = ({ data, renderItem }) => {
-  console.log('### list rendered');
-  return <>{data && data.map((item) => renderItem(item))}</>;
+const List = ({ data, renderItem, HeaderComponent }) => {
+  return (
+    <>
+      <div>{HeaderComponent}</div>
+      <div>
+        {data &&
+          data.map((item) => {
+            return renderItem(item);
+          })}
+      </div>
+    </>
+  );
 };
 
 List.propTypes = {

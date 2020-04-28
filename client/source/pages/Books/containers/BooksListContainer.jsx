@@ -16,7 +16,7 @@ const BooksListContainer = (props) => {
     <List
       data={booksData.data.docs}
       renderItem={(data) => <Item key={data._id} data={data} handleSelect={handleBookSelect} />}
-    ></List>
+    />
   );
 };
 
@@ -27,4 +27,4 @@ Item.propTypes = {
   handleSelect: PropTypes.func.isRequired,
 };
 
-export default BooksListContainer;
+export default React.memo(BooksListContainer);

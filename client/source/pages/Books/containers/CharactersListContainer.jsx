@@ -11,13 +11,25 @@ const Item = ({ data }) => {
   );
 };
 
+const HeaderComponent = () => {
+  return (
+    <div>
+      <input type="text" placeholder="search" />
+    </div>
+  );
+};
+
 const CharactersListContainer = ({ mainCharactersData, history }) => {
   const handleClick = () => {
     history.push('/characters');
   };
   return (
     <>
-      <List data={mainCharactersData} renderItem={(data) => <Item key={data._id} data={data} />} />
+      <List
+        data={mainCharactersData}
+        renderItem={(data) => <Item key={data._id} data={data} />}
+        HeaderComponent={<HeaderComponent />}
+      />
       <div>
         <p onClick={handleClick}>See More</p>
       </div>

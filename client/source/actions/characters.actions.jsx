@@ -17,12 +17,12 @@ export const fetchCharacters = () => async (dispatch) => {
   if (!response.err) {
     dispatch({
       type: FETCH_CHARACTERS_SUCCESS,
-      payload: response.data,
+      payload: response,
     });
   } else {
     dispatch({
       type: FETCH_CHARACTERS_FAILURE,
-      payload: response.data,
+      payload: response,
     });
   }
 };

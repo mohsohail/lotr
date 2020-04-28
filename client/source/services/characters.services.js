@@ -8,15 +8,11 @@ export const processFetchCharacters = async () => {
     url: `${baseUrl}${FETCH_CHARACTERS}`,
     method: 'get',
     headers: {
-      token,
+      Authorization: `Bearer ${token}`,
     },
   };
   const response = await callAPI(request);
-  if (!response.err) {
-    return response;
-  } else {
-    return { err: true };
-  }
+  return response;
 };
 
 export const processFetchCharacter = async (payload) => {
@@ -26,9 +22,5 @@ export const processFetchCharacter = async (payload) => {
     headers: {},
   };
   const response = await callAPI(request);
-  if (!response.err) {
-    return response;
-  } else {
-    return { err: true };
-  }
+  return response;
 };

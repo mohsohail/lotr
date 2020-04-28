@@ -10,10 +10,10 @@ const List = ({ data, renderItem, HeaderComponent, FooterComponent, itemSeparato
         {data &&
           data.map((item, i) => {
             return (
-              <Fragment key={i}>
+              <div style={{ cursor: 'pointer' }} key={i}>
                 {renderItem(item)}
                 {itemSeparator && itemSeparator()}
-              </Fragment>
+              </div>
             );
           })}
       </div>

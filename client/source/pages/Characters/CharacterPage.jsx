@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import { fetchCharacters } from '../../actions/characters.actions';
+import { CharactersProvider } from './context/CharactersContext';
 
 import CharactersView from './views/CharactersView';
 
-class CharactersPage extends Component {
-  componentDidMount() {
-    this.props.fetchCharacters();
-  }
-  render() {
-    return (
-      <div>
-        <CharactersView />
-      </div>
-    );
-  }
-}
-
-CharactersPage.propTypes = {};
-
-const mapStateToProps = (state) => {
-  return {};
+const CharacterPage = (props) => {
+  return (
+    <CharactersProvider>
+      <CharactersView />
+    </CharactersProvider>
+  );
 };
 
-export default connect(mapStateToProps, {
-  fetchCharacters,
-})(CharactersPage);
+CharacterPage.propTypes = {};
+
+export default CharacterPage;

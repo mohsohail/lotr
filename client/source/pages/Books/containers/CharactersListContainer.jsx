@@ -13,7 +13,7 @@ const Item = ({ data }) => {
 };
 
 const headerComponent = () => {
-  return <Search placeholder={'search character'} />;
+  return <div>Top Characters</div>;
 };
 
 const footerComponent = () => {

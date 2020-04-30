@@ -1,9 +1,12 @@
-import HomePage from './source/pages/Home/HomePage';
-import BooksPage from './source/pages/Books/BooksPage';
-import CharacterPage from './source/pages/Characters/CharacterPage';
+// import React from 'react';
 
-export default [
-  { path: '/', exact: true, component: HomePage },
-  { path: '/books', exact: true, component: BooksPage },
-  { path: '/characters', exact: true, component: CharacterPage },
-];
+// import HomePage from './source/pages/Home/HomePage';
+
+// const BooksPageComponent = React.lazy(() => import('./source/pages/Books/BooksPage'));
+// const CharacterPageComponent = React.lazy(() => import('./source/pages/Characters/CharacterPage'));
+
+// export default [
+//   { path: '/', exact: true, component: HomePage },
+//   { path: '/books', exact: true, component: BooksPageComponent },
+//   { path: '/characters', exact: true, component: CharacterPageComponent },
+// ];

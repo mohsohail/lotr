@@ -1,13 +1,30 @@
-import React from 'react';
-import { renderRoutes } from 'react-router-config';
-import Routes from './routes';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import HomePage from './source/pages/Home/HomePage';
+
+const BooksPageComponent = React.lazy(() => import('./source/pages/Books/BooksPage'));
+const CharacterPageComponent = React.lazy(() => import('./source/pages/Characters/CharacterPage'));
 
 class App extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    return <div>{renderRoutes(Routes)}</div>;
+    // {renderRoutes(Routes)}
+    return (
+      <div>
+        <Suspense fallback={<div>...loading</div>}>
+          <Router>
+            <Switch>
+              <Route path="/" exact={true} component={HomePage}></Route>
+              <Route path="/books" exact={true} component={BooksPageComponent}></Route>
+              <Route path="/characters" exact={true} component={CharacterPageComponent}></Route>
+            </Switch>
+          </Router>
+        </Suspense>
+      </div>
+    );
   }
 }
 

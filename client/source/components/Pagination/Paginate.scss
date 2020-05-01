@@ -1,0 +1,12 @@
+ul {
+  padding: 0px;
+  margin-top: 20px;
+}
+li {
+  border: 1px solid #ddd;
+  padding: 10px;
+  &:hover {
+    cursor: pointer;
+    background-color: #ddd;
+  }
+}

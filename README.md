@@ -1,6 +1,4 @@
-# lotr repo
-
-One repo to rule them all
+# One repo to rule them all
 
 to run
 
@@ -21,7 +19,8 @@ I’ve built the project using react, the tech and features used to build it are
 
 The project structure is as follows
 
-```client
+```
+  client
     - public
     - source
       - redux architecture (actions, service, reducer, store)

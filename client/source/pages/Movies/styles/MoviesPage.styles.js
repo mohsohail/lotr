@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { background1 } from '../../../constants/styles';
 
 export const Page = styled.div``;
+
 export const ContainerTwoColumn = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;

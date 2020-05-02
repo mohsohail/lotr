@@ -13,7 +13,6 @@ const MoviesView = () => {
         <LeftSection>
           <MovieListContainer />
         </LeftSection>
-        <RightSection></RightSection>
       </ContainerTwoColumn>
     </Page>
   );

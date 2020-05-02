@@ -9,6 +9,7 @@ import {
   LeftSection,
   RightSection,
 } from '../styles/CharacterPage.styles';
+import QuotesListContainer from '../containers/QuotesListContainer';
 
 const CharactersView = () => {
   return (
@@ -19,7 +20,7 @@ const CharactersView = () => {
           <CharacterListContainer />
         </LeftSection>
         <RightSection>
-          <div>quotes</div>
+          <QuotesListContainer />
         </RightSection>
       </ContainerTwoColumn>
     </Page>

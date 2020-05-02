@@ -1,9 +1,10 @@
 import React, { createContext } from 'react';
-export const CharactersContext = createContext();
+import { useFetch } from '../../../hooks/useFetch';
 
 import { BASEURL, TOKEN } from '../../../constants/env';
 import { FETCH_CHARACTERS } from '../../../constants/endpoints';
-import { useFetch } from '../../../hooks/useFetch';
+
+export const CharactersContext = createContext();
 
 export const CharactersProvider = (props) => {
   let url = BASEURL + FETCH_CHARACTERS;

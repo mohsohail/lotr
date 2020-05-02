@@ -9,3 +9,6 @@ export const FETCH_CHARACTERS = '/character';
 export const FETCH_CHARACTER = ({ id }) => {
   return `/character/${id}`;
 };
+
+// quotes
+export const FETCH_QUOTES = '/quote';

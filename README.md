@@ -4,8 +4,8 @@ One repo to rule them all
 
 to run
 
-npm i
-npm start
+`npm i`
+`npm start`
 
 For this project, I have focused more on the functionality aspects of the project
 I’ve built the project using react, the tech and features used to build it are
@@ -20,7 +20,19 @@ I’ve built the project using react, the tech and features used to build it are
 8. webpack
 
 The project structure is as follows
-client - public - source - redux architecture (actions, service, reducer, store) - components - error (error handling) - hooks (custom hooks) - pages - index.js - App.jsx - routes
+
+```client
+    - public
+    - source
+      - redux architecture (actions, service, reducer, store)
+      - components
+      - error (error handling)
+      - hooks (custom hooks)
+      - pages
+    - index.js
+    - App.jsx
+    - routes
+```
 
 Pages folder contains the 4 pages used throughout the application
 

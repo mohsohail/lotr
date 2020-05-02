@@ -10,7 +10,9 @@ class Home extends Component {
       <>
         <Header />
         <div>
-          welcome to the LOTR website, please browser the site using the navigation link above
+          <h1>
+            welcome to the LOTR website, please browser the site using the navigation link above
+          </h1>
         </div>
       </>
     );

@@ -5,6 +5,7 @@ import HomePage from './source/pages/Home/HomePage';
 
 const BooksPageComponent = React.lazy(() => import('./source/pages/Books/BooksPage'));
 const CharacterPageComponent = React.lazy(() => import('./source/pages/Characters/CharacterPage'));
+const MoviePageComponent = React.lazy(() => import('./source/pages/Movies/MoviesPage'));
 
 class App extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class App extends React.Component {
               <Route path="/" exact={true} component={HomePage}></Route>
               <Route path="/books" exact={true} component={BooksPageComponent}></Route>
               <Route path="/characters" exact={true} component={CharacterPageComponent}></Route>
+              <Route path="/movies" exact={true} component={MoviePageComponent}></Route>
             </Switch>
           </Router>
         </Suspense>

@@ -16,9 +16,9 @@ const headerComponent = () => {
   return <div>Top Characters</div>;
 };
 
-const footerComponent = () => {
-  return <div>see more</div>;
-};
+// const footerComponent = () => {
+//   return <div>see more</div>;
+// };
 
 const itemSeparator = () => {
   return <div style={{ height: 1, width: '100%', backgroundColor: '#000' }}></div>;
@@ -34,9 +34,14 @@ const CharactersListContainer = ({ mainCharactersData, history }) => {
         data={mainCharactersData}
         renderItem={(data) => <Item key={data._id} data={data} />}
         HeaderComponent={headerComponent}
-        FooterComponent={footerComponent}
+        // FooterComponent={footerComponent}
         itemSeparator={itemSeparator}
       />
+      <div>
+        <span onClick={handleClick}>
+          <a href="/characters">See More</a>
+        </span>
+      </div>
     </>
   );
 };

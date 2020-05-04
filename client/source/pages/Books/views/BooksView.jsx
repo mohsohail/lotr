@@ -24,7 +24,7 @@ const BookView = (props) => {
             )}
           </LeftSection>
           <MiddleSection>
-            {bookData.status === 2 && <BookDetailsContainer bookData={bookData} />}
+            <BookDetailsContainer bookData={bookData} />
           </MiddleSection>
           <RightSection>
             {mainCharacters && mainCharacters.length !== 0 && (

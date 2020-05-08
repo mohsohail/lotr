@@ -19,9 +19,10 @@ const MovieListContainer = (props) => {
   }, [direction]);
   return (
     <>
-      <div>
-        <button onClick={() => setDirection('asc')}>asc</button>
-        <button onClick={() => setDirection('dec')}>des</button>
+      <div style={{ margin: '20px 0px' }}>
+        <h2>Sort by order</h2>
+        <button onClick={() => setDirection('asc')}>Asc</button>
+        <button onClick={() => setDirection('dec')}>Des</button>
       </div>
       <table>
         <thead align="left">

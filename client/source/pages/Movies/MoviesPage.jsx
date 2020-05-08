@@ -7,6 +7,7 @@ import { MoviesProvider } from './context/MoviesContext';
 // import components here
 import MoviesView from './views/MoviesView';
 
+// error handling
 import ErrorBoundary from '../../errors/ErrorBoundary/index';
 
 const MoviesPage = (props) => {

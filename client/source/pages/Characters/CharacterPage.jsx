@@ -8,6 +8,7 @@ import { QuotesProvider } from './context/QuotesContext';
 // import components here
 import CharactersView from './views/CharactersView';
 
+// error handling
 import ErrorBoundary from '../../errors/ErrorBoundary/index';
 
 const CharacterPage = (props) => {

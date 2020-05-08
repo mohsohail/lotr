@@ -25,6 +25,9 @@ const CharacterListContainer = (props) => {
 
   return (
     <>
+      <div>
+        <h2>Character List and details</h2>
+      </div>
       <table>
         <thead>
           <tr>
@@ -49,7 +52,6 @@ const CharacterListContainer = (props) => {
           })}
         </tbody>
       </table>
-      {/* <List data={currentCharactersData} renderItem={(item) => <Item data={item} />} /> */}
       <Pagination
         itemsPerPage={charactersPerPage}
         totalItems={charactersData.length}

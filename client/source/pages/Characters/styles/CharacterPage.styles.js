@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { background1 } from '../../../constants/styles';
 
 export const Page = styled.div``;
 export const ContainerTwoColumn = styled.div`
@@ -21,12 +20,25 @@ export const MiddleSection = styled.div`
   /* height: 100%; */
 `;
 export const RightSection = styled.div`
-  background-color: ${background1};
-  /* height: 500px; */
-  /* border-radius: 6px; */
   margin-left: 40px;
 `;
 
 export const Table = styled.table`
   border: 1px solid;
+`;
+
+export const QuoteListContainer = styled.div`
+  height: 1200px;
+  overflow: auto;
+`;
+
+export const QuoteListItem = styled.div`
+  font-size: 16px;
+  padding: 10px 10px;
+  cursor: pointer;
+
+  &:hover {
+    background: ${(props) => (props.highlight ? '#f5f5f5' : 'initial')};
+    font-weight: ${(props) => (props.highlight ? 'bold' : 'normal')};
+  }
 `;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 import { fetchBooks, fetchBook } from '../../actions/books.actions';
 import { fetchCharacters } from '../../actions/characters.actions';
@@ -39,8 +38,6 @@ class BookPage extends Component {
     );
   }
 }
-
-BookPage.propTypes = {};
 
 const mapStateToProps = (state) => {
   return {

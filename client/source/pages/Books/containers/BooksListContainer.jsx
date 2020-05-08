@@ -1,26 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
+// import components
 import List from '../../../components/List/List';
-import Search from '../../../components/Search/Search';
+
+// import custom hooks
 import { useSearch } from '../../../hooks/useSearch';
 
+// import style components
+import { BookListSearchInput, BookListItem } from '../styles/BookPage';
+
 const Item = ({ data, handleSelect }) => {
-  return <div onClick={() => handleSelect(data._id)}>{data.name}</div>;
+  return (
+    <BookListItem onClick={() => handleSelect(data._id)} highlight>
+      {data.name}
+    </BookListItem>
+  );
 };
 
 const headerComponent = (search, setSearch) => {
-  // return <Search placeholder={'search books'} />;
   return (
     <div>
-      <input type="text" onChange={(e) => setSearch(e.target.value)} />
+      <BookListSearchInput
+        type="text"
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="search books"
+      />
     </div>
   );
 };
 
 const BooksListContainer = ({ booksData, handleFetchBook }) => {
   const { docs } = booksData.data;
-  const [docsData, setDocsData] = useState(docs);
+  const [docsData] = useState(docs);
   const [search, setSearch] = useState('');
 
   const handleBookSelect = (bookId) => {
@@ -39,8 +51,6 @@ const BooksListContainer = ({ booksData, handleFetchBook }) => {
     </>
   );
 };
-
-BooksListContainer.propTypes = {};
 
 Item.propTypes = {
   data: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,

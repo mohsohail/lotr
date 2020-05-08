@@ -1,24 +1,25 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
+// import style components
+import { ListHeader, ListContainer, ListItem, ListFooter } from './List.style';
 
 const List = ({ data, renderItem, HeaderComponent, FooterComponent, itemSeparator }) => {
   return (
     <>
-      <div>{HeaderComponent && HeaderComponent()}</div>
-      <br />
-      <div>
+      <ListHeader>{HeaderComponent && HeaderComponent()}</ListHeader>
+      <ListContainer>
         {data &&
           data.map((item, i) => {
             return (
-              <div style={{ cursor: 'pointer' }} key={i}>
+              <React.Fragment key={i}>
                 {renderItem(item)}
                 {itemSeparator && itemSeparator()}
-              </div>
+              </React.Fragment>
             );
           })}
-      </div>
-      <br />
-      <div>{FooterComponent && FooterComponent()}</div>
+      </ListContainer>
+      <ListFooter>{FooterComponent && FooterComponent()}</ListFooter>
     </>
   );
 };

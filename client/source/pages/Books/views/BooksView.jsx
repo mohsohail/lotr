@@ -1,14 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+// import components
 import Header from '../../../components/Header/Header';
 
+// import containers
 import BooksListContainer from '../containers/BooksListContainer';
 import BookDetailsContainer from '../containers/BookDetailsContainer';
 import CharactersListContainer from '../containers/CharactersListContainer';
 
+// import style components
 import { Page, Container, LeftSection, MiddleSection, RightSection } from '../styles/BookPage';
 
+// import error handling
 import ErrorBoundary from '../../../errors/ErrorBoundary/index';
 
 const BookView = (props) => {
@@ -16,7 +19,7 @@ const BookView = (props) => {
   return (
     <ErrorBoundary renderItem={() => <div>Custom error message for Books Page</div>}>
       <Page>
-        <Header></Header>
+        <Header />
         <Container>
           <LeftSection>
             {booksData.status === 2 && (

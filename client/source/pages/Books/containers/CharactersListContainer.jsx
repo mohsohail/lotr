@@ -1,19 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+// import components
 import List from '../../../components/List/List';
-import Search from '../../../components/Search/Search';
+
+// import styled components
+import { CharacterListItem, CharacterListHeader, SeeMore } from '../styles/BookPage';
 
 const Item = ({ data }) => {
   return (
     <div>
-      <div>{data.name}</div>
+      <CharacterListItem>{data.name}</CharacterListItem>
     </div>
   );
 };
 
 const headerComponent = () => {
-  return <div>Top Characters</div>;
+  return (
+    <div>
+      <CharacterListHeader>Top Characters</CharacterListHeader>
+    </div>
+  );
 };
 
 // const footerComponent = () => {
@@ -21,7 +27,7 @@ const headerComponent = () => {
 // };
 
 const itemSeparator = () => {
-  return <div style={{ height: 1, width: '100%', backgroundColor: '#000' }}></div>;
+  return <div style={{ height: 1, width: '100%', backgroundColor: '#ddd' }}></div>;
 };
 
 const CharactersListContainer = ({ mainCharactersData, history }) => {
@@ -37,11 +43,11 @@ const CharactersListContainer = ({ mainCharactersData, history }) => {
         // FooterComponent={footerComponent}
         itemSeparator={itemSeparator}
       />
-      <div>
+      <SeeMore>
         <span onClick={handleClick}>
-          <a href="/characters">See More</a>
+          <a href="/characters">All Characters</a>
         </span>
-      </div>
+      </SeeMore>
     </>
   );
 };
